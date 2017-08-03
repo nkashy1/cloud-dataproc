@@ -1,0 +1,1 @@
+spark-submit --master local --driver-memory 12g --executor-memory 12g --class com.google.cloud.ml.samples.criteo.CriteoPreprocessingApplication --packages "com.github.scopt:scopt_2.11:3.6.0" --jars lib/spark-tensorflow-connector-assembly-1.0.0.jar target/scala-2.11/criteo-prepare_2.11-1.0.jar --base ~/data/criteo/kaggle-challenge/ --in $1 --out $2 -m $3 -x $4 ${@:5}
